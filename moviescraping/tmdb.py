@@ -1,7 +1,11 @@
 import requests  # same library you used in your book scraper!
 
 # Your TMDB API key - sign up free at themoviedb.org to get this
-API_KEY = "f9017c981ea75dc9671e51855e732415"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
 
 # The URL we're sending our request to
 # Think of this like the "menu" we're handing to the waiter
